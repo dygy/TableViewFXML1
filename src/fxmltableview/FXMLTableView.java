@@ -50,12 +50,12 @@ public class FXMLTableView extends Application {
 
     	
     	
-        Pane myPane = (Pane) loader.load();
+        Pane myPane = loader.load();
         
         
         FXMLTableViewController ctr = loader.getController();
-    	ctr.getData().add( new Person("lol ", " kek", "@@@@ ","active"));
-    	ctr.getData().add( new Person(" ", " ", " ",""));
+    	ctr.getData().add( new Person("lol", "kek", "@@@@","active"));
+    	ctr.getData().add( new Person(" ", " ", " "," "));
 
     	
         Scene myScene = new Scene(myPane);

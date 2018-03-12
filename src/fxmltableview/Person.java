@@ -7,13 +7,13 @@ public class Person {
     private final SimpleStringProperty firstName = new SimpleStringProperty("");
     private final SimpleStringProperty lastName = new SimpleStringProperty("");
     private final SimpleStringProperty email = new SimpleStringProperty("");
-    private final String status= new String("");
+    private final SimpleStringProperty status= new SimpleStringProperty("");
 
-    public Person(String text, String lastNameFieldText, String emailFieldText) {
+    public Person() {
         this(" ", " ", " "," ");
     }
 
-    public Person(String firstName, String lastName, String email,String Status) {
+    public Person(String firstName, String lastName, String email,String status) {
         setFirstName(firstName);
         setLastName(lastName);
         setEmail(email);
@@ -24,7 +24,7 @@ public class Person {
         return firstName.get();
     }
 
-    public void setFirstName(String fName) {
+    private void setFirstName(String fName) {
         firstName.set(fName);
     }
 
@@ -32,7 +32,7 @@ public class Person {
         return lastName.get();
     }
 
-    public void setLastName(String fName) {
+    private void setLastName(String fName) {
         lastName.set(fName);
     }
 
@@ -40,13 +40,14 @@ public class Person {
         return email.get();
     }
 
-    public void setEmail(String fName) {
+    private void setEmail(String fName) {
         email.set(fName);
     }
     public String getStatus() {
-        return status;
+        return status.get();
     }
-    public void setStatus (String fname){
-       return;
+    private void setStatus(String fname){
+    status.set(fname);
     }
+
 }

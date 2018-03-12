@@ -20,16 +20,11 @@ public class FXMLTableViewController implements Initializable {
     
     @FXML
     protected void addPerson(ActionEvent event) {
-        getData().add(new Person(firstNameField.getText(),
-                lastNameField.getText(),
-                emailField.getText(),
-                statusField.getText()
-        ));
-
+        getData().add(new Person(firstNameField.getText(), lastNameField.getText(), emailField.getText(), statusField.getText()));
         firstNameField.setText("");
         lastNameField.setText("");
         emailField.setText("");
-        statusField.setText(" ");
+        statusField.setText("");
     }
 
 
@@ -44,7 +39,7 @@ public class FXMLTableViewController implements Initializable {
 		return data;
 	}
 
-	public void setData(ObservableList<Person> data) {
+	private void setData(ObservableList<Person> data) {
 		this.data = data;
 	}
 }
